@@ -1,15 +1,26 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-import App from "./App";
-import ApiComp from "./ApiComp";
-
+import "bootstrap/dist/css/bootstrap.min.css";
+import Header from "./components/layout/header";
+import Footer from "./components/layout/footer";
+import StudentsIndex from "./components/students/index";
+import StudentsCreate from "./components/students/create";
+import StudentsEdit from "./components/students/edit";
+import Main from "./components/layout/main";
 import * as serviceWorker from "./serviceWorker";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
-    <ApiComp />
+    <Header></Header>
+    <Main>
+      <StudentsIndex></StudentsIndex>
+      <hr></hr>
+      <StudentsCreate></StudentsCreate>
+      <hr></hr>
+      <StudentsEdit></StudentsEdit>
+      <Footer></Footer>
+    </Main>
   </React.StrictMode>,
   document.getElementById("root")
 );
